@@ -46372,7 +46372,7 @@ __exportStar(require("./browser-connect"), exports);
 require("error-polyfill");
 
 },{"./key_stores/browser-index":"../node_modules/near-api-js/lib/key_stores/browser-index.js","./common-index":"../node_modules/near-api-js/lib/common-index.js","./browser-connect":"../node_modules/near-api-js/lib/browser-connect.js","error-polyfill":"../node_modules/error-polyfill/index.js"}],"config.js":[function(require,module,exports) {
-const CONTRACT_NAME = "royalty.machiko2.testnet";
+const CONTRACT_NAME = "fontend.learnnft.testnet";
 function getConfig(env) {
   switch (env) {
     case "production":
@@ -63106,11 +63106,14 @@ const BN = require("bn.js");
 const MintingTool = props => {
   const mintNFT = async () => {
     await window.contract.nft_mint({
-      token_id: `${window.accountId}-go-team-token`,
+      // token_id: `${window.accountId}-go-team-token`,
+      token_id: "EAGLE#1",
       metadata: {
-        title: "My Non Fungible Team Token",
-        description: "The Team Most Certainly Goes :)",
-        media: "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif"
+        title: "My Strong eagle",
+        description: "Strong eagle :)",
+        media:
+        // "https://bafybeiftczwrtyr3k7a2k4vutd3amkwsmaqyhrdzlhvpt33dyjivufqusq.ipfs.dweb.link/goteam-gif.gif",
+        "https://bafybeidlxjsjwvr3dge6d2l7gd5ilujjzrip6azqfjklfmpxcykfdy7zly.ipfs.nftstorage.link/"
       },
       receiver_id: window.accountId
     }, 300000000000000,
@@ -63301,7 +63304,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46853" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46463" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
